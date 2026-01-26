@@ -1,0 +1,56 @@
+body {
+    background-color: lightgray;
+}
+
+#main-body {
+    background-color: white;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: -100px;
+    margin-top: 0px;
+    padding: 10px;
+}
+
+li, h1, h2, h3, th {
+    color: red;
+}
+
+ul li a {
+    text-decoration: none;
+    color: chartreuse;
+    font-size: 18pt;
+}
+
+ul li a:hover {
+    color: darkgreen;
+    background-color: gray;
+}
+
+nav {
+    background-color: black;
+    padding: 10px;
+}
+
+nav ul li {
+    display: inline;
+    padding: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+legend {
+    font-weight: bold;
+    font-size: 20pt;
+    color: red;
+}
+
+td, th {
+    text-align: center;
+    padding: 10px;
+}
+
+.error {
+    font-weight: bold;
+    font-size: 18px;
+    background-color: yellow;
+}

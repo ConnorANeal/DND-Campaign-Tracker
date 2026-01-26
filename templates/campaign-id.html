@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block body %}
+    <script src="/static/load-campaign-id.js"></script>
+    <h2>{{ campaign.name }}</h2>
+    <h3>
+        {{ campaign.player_count }} Players |
+        Level {{ campaign.player_level }} |
+        Campaign {% if campaign.completion %}Completed{% else %}In Progress{% endif %}
+    </h3>
+    <p>This is a campaign</p>
+{% endblock %}

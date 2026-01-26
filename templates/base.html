@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Campaign Tracker</title>
+        <link href="/static/style.css" rel="stylesheet">
+        <link href="/static/dynamic.css" rel="stylesheet">
+    </head>
+    <body>
+        <script src="/static/main.js"></script>
+        <div id="main-body">
+            <nav>
+                <ul id="nav-bar">
+                    <li><a href="/">Home</a></li>
+                    {% if current_user.is_authenticated %}
+                        <li><a href="/campaigns">My Campaigns</a></li>
+                        <li><a href="/account">My Account</a></li>
+                        <li><a href="/logout">Logout</a></li>
+                    {% else %}
+                        <li><a href="/register">Register</a></li>
+                        <li><a href="/login">Login</a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+
+            {% block body %}
+            {% endblock %}
+        </div>
+    </body>
+</html>

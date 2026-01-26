@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block body %}
+    <script src="/static/load-campaign-create.js"></script>
+    <p>CREATE CAMPAIGN</p>
+    <form action="/campaigns/create" method="POST">
+        <fieldset>
+            <legend>Create Campaign</legend>
+            {% if error == 1 %}
+                <p class="error">You already have a campaign with that name!</p>
+            {% endif %}
+
+            <label>Name:</label>
+            <input type="text" name="name" required><br><br>
+
+            <label>Player Count:</label>
+            <input type="number" name="count" required><br><br>
+
+            <label>Level:</label>
+            <select id="level" name="level" required>
+
+            </select><br><br>
+
+            <label>Campaign Completed:</label><br>
+            <input type="radio" id="trueOption" name="completion" value="True">
+            <label for="trueOption">True</label>
+            <input type="radio" id="falseOption" name="completion" value="False">
+            <label for="falseOption">False</label><br><br>
+
+            <input type="submit" value="CREATE">
+        </fieldset>
+    </form>
+{% endblock %}

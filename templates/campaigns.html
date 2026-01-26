@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block body %}
+    <h2>Campaigns</h2>
+    <table id="campaign-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Player Count</th>
+                <th>Player Level</th>
+                <th>Completed</th>
+            </tr>
+        </thead>
+        <tbody id="listed-campaigns">
+            {% for c in campaigns %}
+                <tr>
+                    <td><a href="/campaigns/{{c.id}}">{{ c.name }}</a></td>
+                    <td>{{ c.player_count }}</td>
+                    <td>{{ c.player_level }}</td>
+                    <td>{{ c.completion }}</td>
+                </tr>
+            {% endfor %}
+            <tr>
+                <td><a href="campaigns/create">Create New</a></td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block body %}
+    <p>LOGIN</p>
+    <form action="/login" method="POST">
+        <fieldset>
+            <legend>Register New Account</legend>
+            {% if error == 1 %}
+                <p class="error">That username does not exist!</p>
+            {% elif error == 2 %}
+                <p class="error">The password was incorrect!</p>
+            {% endif %}
+            <p>Username: <input type="text" name="username" required></p>
+
+            <p>Password: <input type="password" name="password" required></p>
+
+            <input type="submit" value="LOGIN">
+        </fieldset>
+    </form>
+{% endblock %}

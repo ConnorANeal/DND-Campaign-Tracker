@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block body %}
+    <h2>OH NO ERROR</h2>
+    <p style="font-weight:bold">
+        {% if error == 401 %}
+            ERROR 401: You are unauthorized to be on this page.
+        {% elif error == 403 %}
+            ERROR 403: You are forbidden.
+        {% elif error == 404 %}
+            ERROR 404: This page does not exist.
+        {% elif error == 502 %}
+            ERROR 502: Bad Gateway.
+        {% endif %}
+    </p>
+{% endblock %}
