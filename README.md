@@ -1,0 +1,1 @@
+This is a passion project I am working on here and there in my free time. It is a website which is used to keep track of stats for D&D Campaigns. It is implemented using Python Flask, HTML, and Javascript.
