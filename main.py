@@ -8,8 +8,6 @@ json = FlaskJSON(app)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///campaign-database.sqlite'
 db = SQLAlchemy(app)
 
-#
-
 class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(20), unique=True, nullable=False)
