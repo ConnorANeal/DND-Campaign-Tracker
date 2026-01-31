@@ -160,6 +160,11 @@ def logout():
     logout_user()
     return redirect('/')
 
+@app.route('/api/players')
+@as_json
+def players():
+    return redirect('/campaigns')
+
 @app.errorhandler(401)
 def e401(err):
     return render_template('error.html', error=401)
